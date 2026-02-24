@@ -14,14 +14,36 @@ def clear():
 # Function to calculate result
 def calculate():
     try:
-        result = eval(entry.get())
+        expression = entry.get()
+
+        if "+" in expression:
+            num1, num2 = expression.split("+")
+            result = float(num1) + float(num2)
+
+        elif "-" in expression:
+            num1, num2 = expression.split("-")
+            result = float(num1) - float(num2)
+
+        elif "*" in expression:
+            num1, num2 = expression.split("*")
+            result = float(num1) * float(num2)
+
+        elif "/" in expression:
+            num1, num2 = expression.split("/")
+            if float(num2) == 0:
+                messagebox.showerror("Error", "Cannot divide by zero!")
+                return
+            result = float(num1) / float(num2)
+
+        else:
+            messagebox.showerror("Error", "Invalid Input")
+            return
+
         entry.delete(0, tk.END)
         entry.insert(0, result)
-    except ZeroDivisionError:
-        messagebox.showerror("Error", "Cannot divide by zero!")
-        entry.delete(0, tk.END)
+
     except:
-        messagebox.showerror("Error", "Invalid Input!")
+        messagebox.showerror("Error", "Invalid Input")
         entry.delete(0, tk.END)
 
 # Main window
