@@ -1,2 +1,14 @@
-# Tutedude-assignment-6
-Assignment 6 - Calculator using Tkinter in Python.  Includes a GUI calculator with basic arithmetic operations and error handling.
+# Assignment 6 - Calculator Using Tkinter
+
+This project is a simple calculator built using Python Tkinter.
+
+Features:
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Decimal support
+- Error handling for invalid input
+- Division by zero handling
+
+The calculator uses Tkinter for GUI and eval() for calculation.
