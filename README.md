@@ -11,4 +11,4 @@ Features:
 - Error handling for invalid input
 - Division by zero handling
 
-The calculator uses Tkinter for GUI and eval() for calculation.
+The calculator uses Tkinter for GUI and performs calculations using manual arithmetic logic without using eval().
